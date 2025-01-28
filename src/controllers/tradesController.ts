@@ -1,5 +1,8 @@
-import { fetchLastBinanceTrades } from "services/tradesServices"
+import { fetchLastBinanceTrades, saveTradesToDb } from "services/tradesServices"
 
-export const getHistoricalTransactions = () => {
-    const lastTrades = fetchLastBinanceTrades()
+export const getHistoricalTransactions = async () => {
+    const lastTrades = await fetchLastBinanceTrades()
+    await saveTradesToDb(lastTrades);
+
+    return lastTrades;
 }
