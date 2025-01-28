@@ -20,5 +20,6 @@ module.exports = {
     '^types/(.*)$': '<rootDir>/src/types/$1',
     '^utils/(.*)$': '<rootDir>/src/utils/$1',
     '^utils$': '<rootDir>/src/utils',
+    '^validation/(.*)$': '<rootDir>/src/validation/$1',
   },
 };
