@@ -1,11 +1,14 @@
 import express, { NextFunction, Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import { analysisHistoricalData, getHistoricalTransactions } from 'controllers/tradesController';
+import { limitvalidation, timestampValidation } from 'validation/tradesValidation';
+import { validation } from 'middlewares/validation';
 
 const router = express.Router()
 
 router.get(
     '/:limit',
+    [...limitvalidation, validation],
     async (req: Request, res: Response, next: NextFunction) => {
       try {
         const {limit} = req.params
@@ -19,6 +22,7 @@ router.get(
 
   router.get(
     '/analysis/:timestamp',
+    [...timestampValidation, validation],
     async (req: Request, res: Response, next: NextFunction) => {
       try {
         const {timestamp} = req.params
