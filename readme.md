@@ -1,6 +1,6 @@
-create .env file (copy values from .env.example)
-`cd database`
-`docker compose up -d`
-`cd ..`
-`npm run start`
-to test `npm run test`
+create .env file (copy values from .env.example) <br />
+`cd database` <br />
+`docker compose up -d` <br />
+`cd ..` <br />
+`npm run start` <br />
+to test `npm run test` <br />
