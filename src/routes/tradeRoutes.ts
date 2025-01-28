@@ -8,8 +8,8 @@ router.get(
     '/',
     async (req: Request, res: Response, next: NextFunction) => {
       try {
-        const product = await getHistoricalTransactions();
-        res.status(StatusCodes.OK).json(product);
+        const historicalTrades = await getHistoricalTransactions();
+        res.status(StatusCodes.OK).json(historicalTrades);
       } catch (error) {
         next(error);
       }
