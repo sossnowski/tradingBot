@@ -10,10 +10,14 @@
   "description": "",
   "dependencies": {
     "@types/node": "^22.12.0",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "http-errors": "^2.0.0",
     "http-status-codes": "^2.3.0",
     "mongoose": "^8.9.5",
+    "morgan": "^1.10.0",
     "nodemon": "^3.1.9",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
